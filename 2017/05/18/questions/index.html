@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Quncy&#39;s fictory</title>
+  <title>Golang精编100题 | Quncy&#39;s fictory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Quncy's fictory">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="能力模型级别    模型初级primary    熟悉基本语法，能够看懂代码的意图；在他人指导下能够完成用户故事的开发，编写的代码符合CleanCode规范；中级intermediate    能够独立完成用户故事的开发和测试；能够嗅出代码的坏味道，并知道如何重构达成目标；高级senior    能够开发出高质量高性能的代码；能够熟练使用高级特性，开发编程框架或测试框架；选择题[primary]">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Golang精编100题">
+<meta property="og:url" content="http://yoursite.com/2017/05/18/questions/index.html">
 <meta property="og:site_name" content="Quncy's fictory">
+<meta property="og:description" content="能力模型级别    模型初级primary    熟悉基本语法，能够看懂代码的意图；在他人指导下能够完成用户故事的开发，编写的代码符合CleanCode规范；中级intermediate    能够独立完成用户故事的开发和测试；能够嗅出代码的坏味道，并知道如何重构达成目标；高级senior    能够开发出高质量高性能的代码；能够熟练使用高级特性，开发编程框架或测试框架；选择题[primary]">
+<meta property="og:updated_time" content="2017-05-18T07:03:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Quncy's fictory">
+<meta name="twitter:title" content="Golang精编100题">
+<meta name="twitter:description" content="能力模型级别    模型初级primary    熟悉基本语法，能够看懂代码的意图；在他人指导下能够完成用户故事的开发，编写的代码符合CleanCode规范；中级intermediate    能够独立完成用户故事的开发和测试；能够嗅出代码的坏味道，并知道如何重构达成目标；高级senior    能够开发出高质量高性能的代码；能够熟练使用高级特性，开发编程框架或测试框架；选择题[primary]">
   
     <link rel="alternative" href="/atom.xml" title="Quncy&#39;s fictory" type="application/atom+xml">
   
@@ -149,16 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-questions" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-questions" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/18/questions/">Golang精编100题</a>
+    <h1 class="article-title" itemprop="name">
+      Golang精编100题
     </h1>
   
 
@@ -404,61 +407,26 @@
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/18/questions/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-third" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/02/third/">随便记记（一）</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/02/third/" class="archive-article-date">
-  	<time datetime="2017-05-02T03:08:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一、for循环<br><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">- 常规</div><div class="line">  <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; count; i++ &#123;&#125;</div><div class="line"></div><div class="line">- <span class="string">"while"</span></div><div class="line">  <span class="keyword">for</span> condition &#123; &#125;</div><div class="line"></div><div class="line">- <span class="string">"do-while"</span></div><div class="line">  <span class="keyword">for</span> &#123; <span class="comment">// use "for-break" instead</span></div><div class="line">        doSomething()</div><div class="line">        <span class="keyword">if</span> condition &#123; <span class="keyword">break</span> &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">- iterator loop</div><div class="line">  <span class="keyword">for</span> k, v := <span class="keyword">range</span> f.Value &#123;&#125;</div><div class="line"></div><div class="line">- dead loop</div><div class="line">  <span class="keyword">for</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
-<p>二、Orthogonal Composition<br>1、vertical composition thought(垂直组合思维)<br>Go语言通过type embedding实现垂直组合。组合方式莫过于以下这么几种：</p>
-<p>a) construct interface by embedding interface<br>通过在interface中嵌入interface type name，实现接口行为聚合，组成大接口。这种方式在stdlib中尤为常用。<br><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">type</span> ReadWriter <span class="keyword">interface</span> &#123;</div><div class="line">     Reader</div><div class="line">     Writer</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
-<p>b) construct struct by embedding interface<br><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">type</span> MyReader <span class="keyword">struct</span> &#123;</div><div class="line">      io.Reader <span class="comment">// underlying reader</span></div><div class="line">      N <span class="keyword">int64</span>   <span class="comment">// max bytes remaining</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
-<p>c) construct struct by embedding struct<br><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// sync/pool.go</span></div><div class="line">  <span class="keyword">type</span> poolLocal <span class="keyword">struct</span> &#123;</div><div class="line">      private <span class="keyword">interface</span>&#123;&#125;   <span class="comment">// Can be used only by the respective P.</span></div><div class="line">      shared  []<span class="keyword">interface</span>&#123;&#125; <span class="comment">// Can be used by any P.</span></div><div class="line">      Mutex                 <span class="comment">// Protects shared.</span></div><div class="line">      pad     [<span class="number">128</span>]<span class="keyword">byte</span>     <span class="comment">// Prevents false sharing.</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
-<p>在struct中嵌入interface type name和在struct嵌入struct，都是“委派模式(delegate)”的一种应用。在struct中嵌入interface方便快速构建满足某一个interface的dummy struct，方便快速进行unit testing，仅需实现少数需要的接口方法即可，尤其是针对Big interface时。</p>
-<p>struct中嵌入struct，被嵌入的struct的method会被提升到外面的类型中，比如上述的poolLocal struct，对于外部来说它拥有了Lock和Unlock方法，但是实际调用时，method调用实际被传给poolLocal中的Mutex实例。<br>2、small interface thought(小接口思维)<br>interface是Go语言真正的魔法。前面提到过，interface好比程序肌体的骨架关节，上下连接着骨架部件。interface决定了Go语言中类型的水平组合方式。interface与其实现者之间的关系是隐式的，无需显式的”implements”声明(但编译器会做静态检查)；interface仅仅是method集合，而method和普通function一样声明，无需在特定位置。</p>
-<p>3、horizontal composition thought(水平组合思维)<br>middleware这个词的含义可大可小，在Go Web编程中，常常指的是一个满足Handler interface的HandlerFunc类型实例。实质上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">middleware =  wrapper function + adapter function type</div></pre></td></tr></table></figure></p>
-<p>例子：<br><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">logHandler</span><span class="params">(h http.Handler)</span> <span class="title">http</span>.<span class="title">Handler</span></span> &#123;</div><div class="line">    <span class="keyword">return</span> http.HandlerFunc(<span class="function"><span class="keyword">func</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</div><div class="line">        t := time.Now()</div><div class="line">        log.Printf(<span class="string">"[%s] %q %v\n"</span>, r.Method, r.URL.String(), t)</div><div class="line">        h.ServeHTTP(w, r)</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">authHandler</span><span class="params">(h http.Handler)</span> <span class="title">http</span>.<span class="title">Handler</span></span> &#123;</div><div class="line">    <span class="keyword">return</span> http.HandlerFunc(<span class="function"><span class="keyword">func</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</div><div class="line">        err := validateAuth(r.URL.Query().Get(<span class="string">"auth"</span>))</div><div class="line">        <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line">            http.Error(w, <span class="string">"bad auth param"</span>, http.StatusUnauthorized)</div><div class="line">            <span class="keyword">return</span></div><div class="line">        &#125;</div><div class="line">        h.ServeHTTP(w, r)</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">    http.ListenAndServe(<span class="string">":8080"</span>, logHandler(authHandler(http.HandlerFunc(index))))</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -467,122 +435,89 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/02/third/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/18/questions/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-second" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
+<nav id="article-nav">
+  
+    <a href="/2017/05/02/third/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/27/second/">poj 1088 滑雪问题</a>
-    </h1>
-  
-
+          随便记记（一）
         
-        <a href="/2017/04/27/second/" class="archive-article-date">
-  	<time datetime="2017-04-27T09:59:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Michael喜欢滑雪百这并不奇怪，因为滑雪的确很刺激。可是 为了获得速度，滑的区域必须向下倾斜，而且当你滑到坡底，你不得不再次走上坡或者等待升降机来载你。Michael想知道载一个区域中最长底滑坡。区域由 一个二维数组给出。数组的每个数字代表点的高度。下面是一个例子<br>1  2  3  4  5<br>16 17 18 19 6<br>15 24 25 20 7<br>14 23 22 21 8<br>13 12 11 10 9<br>一个人可以从某个点滑向上下左右相邻四个点之一，当且仅当高度减小。在上面的例子中，一条可滑行的滑坡为24-17-16-1。当然25-24-23-…-3-2-1更长。事实上，这是最长的一条。</p>
-<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>输入的第一行表示区域的行数R和列数C(1 &lt;= R,C &lt;= 100)。下面是R行，每行有C个整数，代表高度h，0&lt;=h&lt;=10000。</p>
-<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>输出最长区域的长度。</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><p>5 5<br>1 2 3 4 5<br>16 17 18 19 6<br>15 24 25 20 7<br>14 23 22 21 8<br>13 12 11 10 9</p>
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><p>25<br><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> main</div><div class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></div><div class="line"><span class="keyword">type</span> node <span class="keyword">struct</span> &#123;</div><div class="line">	line  <span class="keyword">int</span></div><div class="line">	visit <span class="keyword">bool</span></div><div class="line">&#125;</div><div class="line"><span class="comment">// try to solve skiing problem of DFS</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">	mountain = [<span class="number">5</span>][<span class="number">5</span>]<span class="keyword">int</span>&#123;</div><div class="line">		&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;,</div><div class="line">		&#123;<span class="number">16</span>, <span class="number">17</span>, <span class="number">18</span>, <span class="number">19</span>, <span class="number">6</span>&#125;,</div><div class="line">		&#123;<span class="number">15</span>, <span class="number">24</span>, <span class="number">25</span>, <span class="number">20</span>, <span class="number">7</span>&#125;,</div><div class="line">		&#123;<span class="number">14</span>, <span class="number">23</span>, <span class="number">22</span>, <span class="number">21</span>, <span class="number">8</span>&#125;,</div><div class="line">		&#123;<span class="number">13</span>, <span class="number">12</span>, <span class="number">11</span>, <span class="number">10</span>, <span class="number">9</span>&#125;,</div><div class="line">	&#125;</div><div class="line">	max := <span class="number">0</span></div><div class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">5</span>; i++ &#123;</div><div class="line">		<span class="keyword">for</span> j := <span class="number">0</span>; j &lt; <span class="number">5</span>; j++ &#123;</div><div class="line">			path[i][j] = dfs(i, j) + <span class="number">1</span></div><div class="line">			<span class="keyword">if</span> path[i][j] &gt;= max &#123;</div><div class="line">				max = path[i][j]</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	fmt.Printf(<span class="string">"the longest path size is %d %v\n"</span>, max, path)</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> fuct [<span class="number">5</span>][<span class="number">5</span>]node</div><div class="line"><span class="keyword">var</span> mountain [<span class="number">5</span>][<span class="number">5</span>]<span class="keyword">int</span></div><div class="line"><span class="keyword">var</span> path [<span class="number">5</span>][<span class="number">5</span>]<span class="keyword">int</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">dfs</span><span class="params">(i, j <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</div><div class="line">	<span class="keyword">if</span> fuct[i][j].visit &#123;</div><div class="line">		<span class="keyword">return</span> fuct[i][j].line</div><div class="line">	&#125;</div><div class="line">	fuct[i][j].visit = <span class="literal">true</span></div><div class="line">	lens := <span class="number">0</span></div><div class="line">	tmp := <span class="number">0</span></div><div class="line">	<span class="keyword">if</span> i+<span class="number">1</span> &lt;= <span class="number">4</span> &amp;&amp; mountain[i+<span class="number">1</span>][j] &lt; mountain[i][j] &#123;</div><div class="line">		tmp = dfs(i+<span class="number">1</span>, j) + <span class="number">1</span></div><div class="line">		fmt.Printf(<span class="string">"i+1 %d,j %d,tmp %d\n"</span>, i+<span class="number">1</span>, j, tmp)</div><div class="line">		<span class="keyword">if</span> tmp &gt; lens &#123;</div><div class="line">			lens = tmp</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> i<span class="number">-1</span> &gt;= <span class="number">0</span> &amp;&amp; mountain[i<span class="number">-1</span>][j] &lt; mountain[i][j] &#123;</div><div class="line">		tmp = dfs(i<span class="number">-1</span>, j) + <span class="number">1</span></div><div class="line">		fmt.Printf(<span class="string">"i-1 %d,j %d,tmp %d\n"</span>, i<span class="number">-1</span>, j, tmp)</div><div class="line">		<span class="keyword">if</span> tmp &gt; lens &#123;</div><div class="line">			lens = tmp</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> j+<span class="number">1</span> &lt;= <span class="number">4</span> &amp;&amp; mountain[i][j+<span class="number">1</span>] &lt; mountain[i][j] &#123;</div><div class="line">		fmt.Printf(<span class="string">"i %d,j+1 %d,tmp %d\n"</span>, i, j+<span class="number">1</span>, tmp)</div><div class="line">		tmp = dfs(i, j+<span class="number">1</span>) + <span class="number">1</span></div><div class="line">		<span class="keyword">if</span> tmp &gt; lens &#123;</div><div class="line">			lens = tmp</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> j<span class="number">-1</span> &gt;= <span class="number">0</span> &amp;&amp; mountain[i][j<span class="number">-1</span>] &lt; mountain[i][j] &#123;</div><div class="line">		tmp = dfs(i, j<span class="number">-1</span>) + <span class="number">1</span></div><div class="line">		fmt.Printf(<span class="string">"i %d,j-1 %d,tmp %d\n"</span>, i, j<span class="number">-1</span>, tmp)</div><div class="line">		<span class="keyword">if</span> tmp &gt; lens &#123;</div><div class="line">			lens = tmp</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	fuct[i][j].line = lens</div><div class="line">	<span class="keyword">return</span> lens</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/27/second/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+      </div>
+    </a>
+  
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-first" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/27/first/">first</a>
-    </h1>
   
 
-        
-        <a href="/2017/04/27/first/" class="archive-article-date">
-  	<time datetime="2017-04-27T07:19:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>你好，欢迎来到我的个人技术博客。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/27/first/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
   
+
   
 
 
@@ -605,8 +540,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
