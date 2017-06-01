@@ -151,6 +151,76 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/31/python1/">python学习笔记（一）</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/31/python1/" class="archive-article-date">
+  	<time datetime="2017-05-31T07:20:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。<br>list是一个可变的有序表，所以，可以往list中追加元素到末尾：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.append(<span class="string">'Adam'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</div><div class="line">[<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>, <span class="string">'Adam'</span>]</div></pre></td></tr></table></figure></p>
+<p>也可以把元素插入到指定的位置，比如索引号为1的位置：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.insert(<span class="number">1</span>, <span class="string">'Jack'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</div><div class="line">[<span class="string">'Michael'</span>, <span class="string">'Jack'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>, <span class="string">'Adam'</span>]</div></pre></td></tr></table></figure></p>
+<p>要删除list末尾的元素，用pop()方法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.pop()</div><div class="line"><span class="string">'Adam'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</div><div class="line">[<span class="string">'Michael'</span>, <span class="string">'Jack'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>]</div></pre></td></tr></table></figure></p>
+<p>要删除指定位置的元素，用pop(i)方法，其中i是索引位置：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.pop(<span class="number">1</span>)</div><div class="line"><span class="string">'Jack'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</div><div class="line">[<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>]</div></pre></td></tr></table></figure></p>
+<p>要把某个元素替换成别的元素，可以直接赋值给对应的索引位置：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates[<span class="number">1</span>] = <span class="string">'Sarah'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</div><div class="line">[<span class="string">'Michael'</span>, <span class="string">'Sarah'</span>, <span class="string">'Tracy'</span>]</div></pre></td></tr></table></figure></p>
+<p>list里面的元素的数据类型也可以不同，比如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="string">'Apple'</span>, <span class="number">123</span>, <span class="keyword">True</span>]</div></pre></td></tr></table></figure></p>
+<p>list元素也可以是另一个list，比如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>p = [<span class="string">'asp'</span>, <span class="string">'php'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s = [<span class="string">'python'</span>, <span class="string">'java'</span>, p, <span class="string">'scheme'</span>]</div></pre></td></tr></table></figure></p>
+<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p>另一种有序列表叫元组：tuple。tuple和list非常类似，但是tuple一旦初始化就不能修改。</p>
+<p>不可变的tuple有什么意义？因为tuple不可变，所以代码更安全。如果可能，能用tuple代替list就尽量用tuple。</p>
+<p>tuple的陷阱：当你定义一个tuple时，在定义的时候，tuple的元素就必须被确定下来</p>
+<p>只有1个元素的tuple定义时必须加一个逗号,，来消除歧义：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>t = (<span class="number">1</span>,)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>t</div><div class="line">(<span class="number">1</span>,)</div></pre></td></tr></table></figure></p>
+<p>tuple所谓的“不变”是说，tuple的每个元素，指向永远不变。即指向’a’，就不能改成指向’b’，指向一个list，就不能改成指向其他对象，但指向的这个list本身是可变的</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/31/python1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-questions" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -171,7 +241,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>能力模型<br>级别    模型<br>初级<br>primary    熟悉基本语法，能够看懂代码的意图；<br>在他人指导下能够完成用户故事的开发，编写的代码符合CleanCode规范；<br>中级<br>intermediate    能够独立完成用户故事的开发和测试；<br>能够嗅出代码的坏味道，并知道如何重构达成目标；<br>高级<br>senior    能够开发出高质量高性能的代码；<br>能够熟练使用高级特性，开发编程框架或测试框架；<br>选择题<br>[primary] 下面属于关键字的是（）<br>A. func<br>B. def<br>C. struct<br>D. class</p>
+        <p>能力模型<br>级别    模型<br>初级(primary)<br>    熟悉基本语法，能够看懂代码的意图；<br>    在他人指导下能够完成用户故事的开发，编写的代码符合CleanCode规范；<br>中级(intermediate)<br>    能够独立完成用户故事的开发和测试；<br>    能够嗅出代码的坏味道，并知道如何重构达成目标；<br>高级(senior)<br>    能够开发出高质量高性能的代码；<br>    能够熟练使用高级特性，开发编程框架或测试框架；<br>选择题<br>[primary] 下面属于关键字的是（）<br>A. func<br>B. def<br>C. struct<br>D. class</p>
 <p>参考答案：AC</p>
 <p>[primary] 定义一个包内全局字符串变量，下面语法正确的是 （）<br>A. var str string<br>B. str := “”<br>C. str = “”<br>D. var str = “”</p>
 <p>参考答案：AD</p>
@@ -408,6 +478,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">golang</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -464,6 +545,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">golang</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -516,6 +608,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">golang 算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -670,6 +773,18 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">golang</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">golang 算法</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
